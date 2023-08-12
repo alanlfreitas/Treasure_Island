@@ -1,19 +1,27 @@
 ########## Testing conditionals ##########
-#print("Welcome to the rollercoaster!")
-#height = int(input("What is your height in cm? "))
-#age = int(input("How old are you? "))
-#if height >= 120:
-#  print("Go ahead. You can ride the rollercoaster.")
-#  if age < 12:
-#    print("Please pay $5.")
-#  elif age <= 18:
-#    print("Please pay $7.")
-#  elif age > 18 and age <= 21:
-#    print("Please pay $10")
-#  else:
-#    print("Please pay $12.")
-#else:
-#  print("Sorry. But you can't ride the rollercoaster.")
+print("Welcome to the rollercoaster!")
+height = int(input("What is your height in cm? "))
+age = int(input("How old are you? "))
+bill1 = 0
+if height >= 120:
+  print("Go ahead. You can ride the rollercoaster.")
+  if age < 12:
+    bill1 = 5
+    print("Please pay $5.")
+  elif age <= 18:
+    bill1 = 7
+    print("Please pay $7.")
+  else:
+    bill1 = 12
+    print("Please pay $12.")
+  photo = input("Do you want a photo taken? Y or N. ")
+  if photo == "Y" or photo == "y":
+    billf = bill1 + 3
+    print(f"Your final bill is ${billf}")
+  else:
+    print(f"Your final bill is ${bill1}")  
+else:
+  print("Sorry. But you can't ride the rollercoaster.")
 
 # 🚨 Don't change the code below 👇
 #number = int(input("Which number do you want to check? "))
@@ -50,17 +58,17 @@
 #    print(f"Your BMI is {bmi}, you are Tais Carla.")
 
 # 🚨 Don't change the code below 👇
-year = int(input("Which year do you want to check? "))
+#year = int(input("Which year do you want to check? "))
 # 🚨 Don't change the code above 👆
 
 #Write your code below this line 👇
-if year % 4 == 0:
-    if year % 100 == 0:
-        if year % 400 == 0:
-            print("Leap year.")
-        else:
-            print("Not leap year.")
-    else:
-        print("Leap year.")
-else:
-    print("Not leap year.")
+#if year % 4 == 0:
+#    if year % 100 == 0:
+#        if year % 400 == 0:
+#            print("Leap year.")
+#        else:
+#            print("Not leap year.")
+#    else:
+#        print("Leap year.")
+#else:
+#    print("Not leap year.")
