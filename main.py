@@ -107,29 +107,40 @@ name2 = input("What is their name? \n")
 # 🚨 Don't change the code above 👆
 
 #Write your code below this line 👇
-combined_names = name1 + name2
-lower_case = combined_names.lower()
 
-t = lower_case.count("t")
-r = lower_case.count("r")
-u = lower_case.count("u")
-e = lower_case.count("e")
+#to begin i gotta combine the names so it's easier to count later on
+names = name1 + name2
 
+#now i gotta turn the name to lower case so i can start counting
+names = names.lower()
+
+#time to start counting the letters and compare it to TRUE
+t = names.count("t")
+r = names.count("r")
+u = names.count("u")
+e = names.count("e")
+
+#here we gather the full quantity
 true = t + r + u + e
 
-l = lower_case.count("l")
-o = lower_case.count("o")
-v = lower_case.count("v")
-e = lower_case.count("e")
+#time to start counting the letters and compare it to LOVE
+l = names.count("l")
+o = names.count("o")
+v = names.count("v")
+e = names.count("e")
 
+#here we gather the full quantity
 love = l + o + v + e
 
-score = str(true) + str(love) #or score = int(str(true) + str(love))
-intscore = int(score)
+#combining total score
+score = int(str(true) + str(love))
+#gotta convert SCORE to INT
+#finalscore = int(score)
 
-if (intscore < 10) or (intscore > 90):
-    print(f"Your score is {intscore}, you go together like coke and mentos.")
-elif (intscore >= 40) and (intscore <= 50):
-    print(f"Your score is {intscore}, you are alright together.")
+#time to print the results
+if (score < 10) or (score > 90):
+    print(f"Your score is {score}, you go together like coke and mentos.")
+elif (score >= 40) and (score <= 50):
+    print(f"Your score is {score}, you are alright together.")
 else:
-    print(f"Your score is {intscore}.")
+    print(f"Your score is {score}.")
