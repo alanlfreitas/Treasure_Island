@@ -170,33 +170,66 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
 
-#https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
-
 #Write your code below this line 👇
-option1 = str(input("Okay, adventurer! You're at a crossroad with a map and you have two options, to turn left or right. The instruction on the map is not clear enough and you have to make a choice. To turn RIGHT or LEFT. What will you do? \n"))
-#loweroption1 = option1.lower()
+option1 = input('''
+Okay, adventurer! You're at a crossroad with a map and you have two options, to turn left or right.
+The instruction on the map is not clear enough and you have to make a choice.
+To turn RIGHT or LEFT. What will you do?
+''').lower()
+
 if option1 == 'right':
-  print("You may go ahead, adventurer. Try your luck!")
-  option2 = str(input("As you go walking down the street you chose, you find a broken bridge. The river seems quiet and unharmful. You have to cross this river so you may get closer to the treasure. According to the map you had three options: to cross using the BRIDGE, SWIM to the other side or take the BOAT. What will you do? \n"))
+  print('''
+  You may go ahead, adventurer. Try your luck!
+  ''')
+  option2 = input('''
+  As you go walking down the street you chose, you find a bridge.
+  The river seems quiet and unharmful. You have to cross this river so you may get closer to the treasure.
+  According to the map you had three options: to cross using the BRIDGE, SWIM to the other side or take the BOAT.
+  What will you do?
+  ''').lower()
   if option2 == 'boat':
-    print("You paddle to the other side safely")
-    option3 = str(input('''As you arrive at the other side the map tells you to go straight on the road you find.
-    At the end of the road you find a suspicious house, as described in the map. You see three doors: a BLACK door, a WHITE door and BROWN door.
+    print('''
+    You paddle to the other side safely
+    ''')
+    option3 = input('''
+    As you arrive at the other side the map tells you to go straight on the road you find.
+    At the end of the road you find a suspicious house, as described in the map.
+    You see three doors: a BLACK door, a WHITE door and BROWN door.
     According to the map two of these doors have deadly traps behind them and it's not clear which doors have traps.
-    Which door will you choose? \n'''))
+    Which door will you choose?
+    ''').lower()
     if option3 == "black":
-      print("Congratulation, adventurer. You found the treasure and a safe haven.")
+      print('''
+      Congratulations, adventurer. You found the treasure and a safe haven.
+      ''')
     elif option3 == "white":
-      print("Attatched to the door is an explosive and you explode to pieces. Game over! Start again!")
+      print('''
+      Attatched to the door is an explosive and you explode to pieces. Game over! Start again!
+      ''')
     elif option3 == "brown":
-      print("Behind this door you unleash an army of zombies and get eaten to death. Game over! Start again!")
+      print('''
+      Behind this door you unleash an army of zombies and get eaten to death. Game over! Start again!
+      ''')
     else:
-      print("By doing nothing you realize that the air is poisonous and choke to death. Game over! Start again!")
+      print('''
+      By doing nothing you realize that the air is poisonous and choke to death. Game over! Start again!
+      ''')
   elif option2 == 'swim':
-    print("You're attacked by piranas and die. Game over! Start again!")
+    print('''
+    You're attacked by piranas and die. Game over! Start again!
+    ''')
+  elif option2 == 'bridge':
+    print('''
+    As you decide to cross and walk towards the bridge, a mysterious fog covers the bridge making it impossible to see anything ahead.
+    You suddenly fall into the river and get eaten by piranas. Game over! Start again!
+    ''')
   else:
-    print("You stay on the beach, rest and a group of cannibals eat you. Game over! Start again!")
+    print('''
+    You stay on the beach, rest and a group of cannibals eat you. Game over! Start again!
+    ''')
   
 else:
-  print('Game over. Start Again!')
+  print('''
+  Game over. Start Again!
+  ''')
   
